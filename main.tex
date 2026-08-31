@@ -166,50 +166,50 @@
     \begin{header}
         \textbf{\fontsize{24 pt}{24 pt}\selectfont Agustin Gaggero}
 
-        \vspace{0.3 cm}
+        \vspace{0.15 cm}
+
+        {\fontsize{12 pt}{12 pt}\selectfont\color{primaryColor}Full-Stack Software Engineer}
+
+        \vspace{0.25 cm}
 
         \normalsize
         \mbox{\hrefWithoutArrow{mailto:agusgaggero@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}agusgaggero@gmail.com}}%
-        \kern 0.25 cm%
-        \AND%
-        \textbar\
-        \kern 0.25 cm%
+        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
         \mbox{\hrefWithoutArrow{tel:+4571435076}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}71 43 50 76}}%
-        \kern 0.25 cm%
-        \AND%
-        \textbar\
-        \kern 0.25 cm%
+        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
         \mbox{\hrefWithoutArrow{https://agusgaggero.com/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}agusgaggero.com}}%
-        \kern 0.25 cm%
-        \AND%
-        \textbar\
-        \kern 0.25 cm%
+        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
         \mbox{\hrefWithoutArrow{https://linkedin.com/in/agustingaggero/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}LinkedIn}}%
-        \kern 0.25 cm%
-        \AND%
-        \textbar\
-        \kern 0.25 cm%
+        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
         \mbox{\hrefWithoutArrow{https://github.com/Guchito}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}GitHub}}%
     \end{header}
 
     \vspace{0.3 cm - 0.3 cm}
 
     
+    \section{Summary}
+
+    \begin{onecolentry}
+        Full-Stack Software Engineer with production experience building and maintaining web platforms, APIs, integrations and mobile applications. Currently owning software across the stack at an EV charging company, with a focus on Laravel, PHP, React, TypeScript and modern web infrastructure.
+    \end{onecolentry}
+
     \section{Skills}
 
     \begin{onecolentry}
         \begin{highlightsforbulletentries}
 
 
-        \item \textbf{Programming Languages:} JavaScript \textbar\ TypeScript \textbar\ PHP \textbar\ SQL \textbar\ HTML \textbar\ CSS
+        \item \textbf{Languages:} JavaScript \textbar\ TypeScript \textbar\ PHP \textbar\ SQL \textbar\ HTML \textbar\ CSS
 
-        \item \textbf{Backend:} Laravel \textbar\ Filament \textbar\ Livewire \textbar\ Node.js \textbar\ Express \textbar\ WordPress / WooCommerce \textbar\ Shopify \textbar\ MySQL \textbar\ \mbox{PostgreSQL} \textbar\ MongoDB \textbar\ Eloquent \textbar\ Sequelize \textbar\ REST APIs \textbar\ Webhooks \textbar\ OAuth2 \textbar\ JWT
+        \item \textbf{Backend:} Laravel \textbar\ Eloquent \textbar\ Filament \textbar\ Livewire \textbar\ Node.js \textbar\ Express \textbar\ MySQL \textbar\ \mbox{PostgreSQL}
 
-        \item \textbf{Frontend \& Mobile:} React \textbar\ Next.js \textbar\ Astro \textbar\ Svelte \textbar\ Solid.js \textbar\ React Native / Expo \textbar\ Alpine.js \textbar\ Tailwind CSS \textbar\ Radix UI \textbar\ Vite \textbar\ GSAP / Motion \textbar\ D3.js
+        \item \textbf{Frontend \& Mobile:} React \textbar\ Next.js \textbar\ Astro \textbar\ React Native \textbar\ Expo \textbar\ Tailwind CSS \textbar\ Vite
 
-        \item \textbf{Testing \& Quality:} PHPUnit \textbar\ Playwright \textbar\ Jest \textbar\ Supertest \textbar\ PHPStan (level 8) \textbar\ PHPCS \textbar\ Swagger
+        \item \textbf{APIs \& Integrations:} REST APIs \textbar\ OAuth2 \textbar\ Webhooks \textbar\ WooCommerce \textbar\ Shopify
 
-        \item \textbf{Other Skills:} REST API Design \textbar\ API Integration \textbar\ Multi-Tenant Architecture \textbar\ CI/CD (GitHub Actions) \textbar\ Docker \textbar\ Git / GitHub Flow \textbar\ Deployment (Forge, DigitalOcean, Vercel, Netlify, EAS) \textbar\ SEO \textbar\ Accessibility (WCAG 2.1 AA) \textbar\ UX/UI Design
+        \item \textbf{Testing \& Quality:} PHPUnit \textbar\ Playwright \textbar\ Jest \textbar\ Supertest \textbar\ PHPStan \textbar\ Swagger
+
+        \item \textbf{Infrastructure:} Docker \textbar\ GitHub Actions \textbar\ Laravel Forge \textbar\ DigitalOcean \textbar\ Vercel
 
 
 
@@ -231,12 +231,12 @@
 
         \begin{onecolentry}
             \begin{highlights}
-                \item Build and maintain the Partner Portal, a multi-tenant EV charging operations platform (Laravel, Filament, Livewire, MySQL) covering order pipelines, inventories, installer operations, returns, and invoicing, with serialized tracking of individual charger units.
-                \item Led the new company website in Astro, React, TypeScript, and Tailwind CSS, deployed on Vercel with SEO-focused performance and transactional email flows.
-                \item Shipped a React Native / Expo installer app to iOS and Android with QR and barcode scanning, real-time serial validation, and a model-specific installation wizard.
-                \item Authored a WooCommerce plugin bridging merchant stores to our Partner API, with OAuth2 token caching, queued submission with retry and backoff.
-                \item Integrated third-party platforms including Zaptec, EOSVolt, and Shopify, with HMAC-verified webhook intake that creates orders automatically under per-team configuration.
-                \item Build Git workflow improvements with staging branches auto-deployed through Forge to DigitalOcean, and added Playwright end-to-end coverage.
+                \item Maintain the Partner Portal, a multi-tenant EV charging operations platform (Laravel, Filament, MySQL) covering order pipelines, inventory, installer operations, returns and invoicing. Designed the domain model and Eloquent relationships behind serialized charger tracking and per-team data isolation.
+                \item Designed and developed new functionality in our internal REST API, integrating Monta, Zaptec, EOSVolt and Shopify to automate operator transfers and synchronize EV charging data, with HMAC-verified webhook intake for automated order creation.
+                \item Led the new company website in Astro, React, TypeScript and Tailwind CSS, deployed on Vercel with SEO-focused performance and transactional email flows.
+                \item Designed and shipped a React Native / Expo installer app for iOS and Android, with QR and barcode scanning, real-time serial validation and a model-specific installation wizard.
+                \item Designed and built a WooCommerce plugin bridging merchant stores to our Partner API, with OAuth2 token caching, queued order submission with retry and backoff, rate limiting and HPOS compatibility.
+                \item Own deployment and quality workflow: staging branches auto-deployed through Forge to DigitalOcean, Playwright end-to-end coverage, and PHPUnit suites kept clean at PHPStan level 8.
             \end{highlights}
         \end{onecolentry}
 
@@ -281,6 +281,7 @@
 
         \vspace{0.30 cm}
 
+        \needspace{7\baselineskip} % keep the Juju entry with its bullet
         \begin{twocolentry}{
         \textit{Copenhagen, DK}
 
@@ -294,7 +295,7 @@
 
         \begin{onecolentry}
             \begin{highlights}
-                \item Achieved Michelin Bib Gourmand awards in 2023 and 2024, and "Best Bistro" by Årets Ret in 2023, reflecting high standards and attention to detail. Led a team in a high-pressure, fast-paced environment, balancing creativity with precision to maintain Michelin levels.
+                \item Led a high-pressure restaurant team while maintaining demanding service standards, contributing to Bib Gourmand recognition in 2023 and 2024 from Michelin and "Best Bistro" at Årets Ret 2023.
             \end{highlights}
         \end{onecolentry}
 
@@ -385,7 +386,7 @@
         \textit{2021}}
             \mbox{\hrefWithoutArrow{https://www.digitalhouse.com/} {\color{black} \hspace*{0.13cm}\textbf{Digital House}}}
 
-            \textit{Full-Stack Web Development Bootcamp}
+            \textit{Full-Stack Web Development}
         \end{twocolentry}
 
         \vspace{0.10 cm}
@@ -409,20 +410,20 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item Three years of Electronic Engineering before moving into software. The grounding in circuits, embedded systems and hardware constraints now feeds directly into my work on EV charging infrastructure, where the software has to match how the hardware actually behaves.
+                \item Three years of Electronic Engineering before transitioning to software development, providing a foundation in systems thinking, hardware and the technical constraints relevant to EV charging infrastructure.
             \end{highlights}
         \end{onecolentry}
 
 
     \section{Hobbies \& Interests}
         \begin{onecolentry}
-            \textbf{Plane Private Pilot:} Trained to manage complex systems, requiring high attention to detail and adherence to protocols. Demonstrated quick decision making and adaptability under pressure, valuable in software development environments.
+            \textbf{Private Pilot:} Licensed private pilot, drawn to aviation for the combination of technical systems, procedures and decision-making under pressure.
         \end{onecolentry}
 
         \vspace{0.20 cm}
 
         \begin{onecolentry}
-            \textbf{Marathon Runner:} Finished the 2026 Copenhagen Marathon in 3:55, a goal set months out and trained for through bad weather, setbacks and slow progress. The same long-horizon discipline I bring to shipping software: commit to the target, do the unglamorous work every day, and finish what I start.
+            \textbf{Marathon Runner:} Finished the 2026 Copenhagen Marathon in 3:55, a goal set months out and trained for through bad weather and slow progress.
         \end{onecolentry}
 
 \end{document}
