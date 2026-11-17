@@ -1,3 +1,5 @@
+% chktex-file 1
+% chktex-file 37
 \documentclass[10pt, letterpaper]{article}
 
 % Packages:
@@ -40,7 +42,7 @@
 
 % Ensure that generate pdf is machine readable/ATS parsable:
 \ifPDFTeX
-    \input{glyphtounicode}
+    \input{glyphtounicode} % chktex 27
     \pdfgentounicode=1
     % \usepackage[T1]{fontenc} % this breaks sb2nov
     \usepackage[utf8]{inputenc}
@@ -59,7 +61,7 @@
 \makeatletter
 \let\ps@customFooterStyle\ps@plain % Copy the plain style to customFooterStyle
 \patchcmd{\ps@customFooterStyle}{\thepage}{
-    \color{gray}\textit{\small Agustin Gaggero - Page \thepage{} of \pageref*{LastPage}}
+    \color{gray}\textit{\small Agustin Gaggero -- Page \thepage{} of~\pageref*{LastPage}} % chktex 8
 }{}{} % replace number by desired string
 \makeatother
 \pagestyle{customFooterStyle}
@@ -140,7 +142,7 @@
         \LenToUnit{\paperwidth-2 cm-0.2 cm+0.05cm},
         \LenToUnit{\paperheight-1.0 cm}
     ){\vtop{{\null}\makebox[0pt][c]{
-        \small\color{gray}\textit{Last updated in August 2026}\hspace{\widthof{Last updated in August 2026}}
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
     }}}%
   }%
 }%
@@ -161,47 +163,46 @@
     }
     \newsavebox\ANDbox
     \sbox\ANDbox{}
+    \newcommand{\headersep}{\kern 0.25 cm\AND$\cdot$\kern 0.25 cm}
 
 
     \begin{header}
         \textbf{\fontsize{24 pt}{24 pt}\selectfont Agustin Gaggero}
 
-        \vspace{0.15 cm}
+        {\large\color{primaryColor}Full-Stack Software Engineer}
 
-        {\fontsize{12 pt}{12 pt}\selectfont\color{primaryColor}Full-Stack Software Engineer}
-
-        \vspace{0.25 cm}
+        \vspace{0.3 cm}
 
         \normalsize
         \mbox{\hrefWithoutArrow{mailto:agusgaggero@gmail.com}{\color{black}{\footnotesize\faEnvelope[regular]}\hspace*{0.13cm}agusgaggero@gmail.com}}%
-        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
+        \headersep%
         \mbox{\hrefWithoutArrow{tel:+4571435076}{\color{black}{\footnotesize\faPhone*}\hspace*{0.13cm}71 43 50 76}}%
-        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
+        \headersep%
         \mbox{\hrefWithoutArrow{https://agusgaggero.com/}{\color{black}{\footnotesize\faLink}\hspace*{0.13cm}agusgaggero.com}}%
-        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
+        \headersep%
         \mbox{\hrefWithoutArrow{https://linkedin.com/in/agustingaggero/}{\color{black}{\footnotesize\faLinkedinIn}\hspace*{0.13cm}LinkedIn}}%
-        \hspace*{0.2 cm}\textperiodcentered\hspace*{0.2 cm}%
+        \headersep%
         \mbox{\hrefWithoutArrow{https://github.com/Guchito}{\color{black}{\footnotesize\faGithub}\hspace*{0.13cm}GitHub}}%
     \end{header}
 
-    \vspace{0.3 cm - 0.3 cm}
+    \vspace{0.3 cm - 0.3 cm} % chktex 8
 
-    
+
     \section{Summary}
 
     \begin{onecolentry}
         Full-Stack Software Engineer with production experience building and maintaining web platforms, APIs, integrations and mobile applications. Currently owning software across the stack at an EV charging company, with a focus on Laravel, PHP, React, TypeScript and modern web infrastructure.
     \end{onecolentry}
 
+
     \section{Skills}
 
     \begin{onecolentry}
         \begin{highlightsforbulletentries}
 
-
         \item \textbf{Languages:} JavaScript \textbar\ TypeScript \textbar\ PHP \textbar\ SQL \textbar\ HTML \textbar\ CSS
 
-        \item \textbf{Backend:} Laravel \textbar\ Eloquent \textbar\ Filament \textbar\ Livewire \textbar\ Node.js \textbar\ Express \textbar\ MySQL \textbar\ \mbox{PostgreSQL}
+        \item \textbf{Backend:} Laravel \textbar\ Eloquent \textbar\ Filament \textbar\ Livewire \textbar\ Node.js \textbar\ Express \textbar\ MySQL \textbar\ PostgreSQL
 
         \item \textbf{Frontend \& Mobile:} React \textbar\ Next.js \textbar\ Astro \textbar\ React Native \textbar\ Expo \textbar\ Tailwind CSS \textbar\ Vite
 
@@ -211,20 +212,19 @@
 
         \item \textbf{Infrastructure:} Docker \textbar\ GitHub Actions \textbar\ Laravel Forge \textbar\ DigitalOcean \textbar\ Vercel
 
-
-
         \end{highlightsforbulletentries}
     \end{onecolentry}
+
 
     \section{Experience}
 
         \begin{twocolentry}{
-            \textit{Copenhagen, DK}    
-                
+            \textit{Copenhagen, DK}
+
             \textit{May 2025 – Present}}
             \textbf{Full-Stack Developer}
-                
-            \hrefWithoutArrow{https://nordiccharge.com/} {\color{black} \hspace*{0.13cm}\textit{Nordic Charge}}
+
+            \hrefWithoutArrow{https://www.nordiccharge.com/} {\color{black} \hspace*{0.13cm}\textit{Nordic Charge}}
         \end{twocolentry}
 
         \vspace{0.10 cm}
@@ -240,19 +240,19 @@
             \end{highlights}
         \end{onecolentry}
 
-
         \vspace{0.30 cm}
 
         \begin{twocolentry}{
             \textit{Remote}
 
             \textit{Dec 2024 – Jun 2025}}
-                \textbf{WordPress Developer}
+            \textbf{WordPress Developer}
 
-                \hrefWithoutArrow{https://newlumina.com/} {\color{black} \hspace*{0.13cm}\textit{Lumina Marketing}}
+            \hrefWithoutArrow{https://newlumina.com/} {\color{black} \hspace*{0.13cm}\textit{Lumina Marketing}}
         \end{twocolentry}
 
         \vspace{0.10 cm}
+
         \begin{onecolentry}
             \begin{highlights}
                 \item Built and maintained custom WordPress sites for clients, creating and modifying themes and plugins and integrating third-party tools.
@@ -266,12 +266,13 @@
             \textit{Copenhagen, DK}
 
             \textit{Sep 2024 – Present}}
-                \textbf{Frontend Web Developer (Volunteer)}
+            \textbf{Frontend Web Developer (Volunteer)}
 
-                \hrefWithoutArrow{https://www.nordicblockchain.com/} {\color{black} \hspace*{0.13cm}\textit{Nordic Blockchain Association}}
+            \hrefWithoutArrow{https://www.nordicblockchain.com/} {\color{black} \hspace*{0.13cm}\textit{Nordic Blockchain Association}}
         \end{twocolentry}
 
         \vspace{0.10 cm}
+
         \begin{onecolentry}
             \begin{highlights}
                 \item Design and build the official websites for the 2025 and 2026 Nordic Blockchain conferences in Webflow, with custom JavaScript for interactive elements, contributing to over €100,000 in ticket sales.
@@ -279,15 +280,14 @@
             \end{highlights}
         \end{onecolentry}
 
-        \vspace{0.30 cm}
+        \newpage
 
-        \needspace{7\baselineskip} % keep the Juju entry with its bullet
         \begin{twocolentry}{
-        \textit{Copenhagen, DK}
+            \textit{Copenhagen, DK}
 
-        \textit{Jan 2022 – Aug 2024}}
+            \textit{Jan 2022 – Aug 2024}}
             \textbf{Restaurant Manager}
-            
+
             \hspace*{0.13cm}\textit{Juju}
         \end{twocolentry}
 
@@ -295,36 +295,36 @@
 
         \begin{onecolentry}
             \begin{highlights}
-                \item Led a high-pressure restaurant team while maintaining demanding service standards, contributing to Bib Gourmand recognition in 2023 and 2024 from Michelin and "Best Bistro" at Årets Ret 2023.
+                \item Led a high-pressure restaurant team while maintaining demanding service standards, contributing to Bib Gourmand recognition in 2023 and 2024 from Michelin and ``Best Bistro'' at Årets Ret 2023.
             \end{highlights}
         \end{onecolentry}
 
-    
+
     \section{Projects}
 
         \begin{twocolentry}{
-                \mbox{
-                    \mbox{\hrefWithoutArrow{https://github.com/Guchito/running-coach}{\color{black}Source Code }}%
-                    \textbar\
-                    \mbox{\hrefWithoutArrow{https://running-coach-flame.vercel.app/}{\color{black}Live Website}}%
-                }
-
+            \mbox{
+                \mbox{\hrefWithoutArrow{https://github.com/Guchito/running-coach}{\color{black}Source Code }}%
+                \textbar\
+                \mbox{\hrefWithoutArrow{https://running-coach-flame.vercel.app/}{\color{black}Live Website}}%
             }
-                \textbf{Gunna – AI Running Coach}
 
-                \vspace{0.10 cm}
-
-            \end{twocolentry}
+        }
+            \textbf{Gunna – AI Running Coach}
 
             \vspace{0.10 cm}
 
-            \begin{onecolentry}
-                {A training log that ingests Apple Watch and Garmin workouts and pairs them with an AI coach that sees your goal and full run history}
-                \begin{highlights}
-                    \item \textbf{Features:} \texttt{.fit} and CSV parsing into per-km splits, heart-rate zones and running-form metrics; Riegel-projected race times; streaming AI chat with summarized run context; scrypt password hashing with JWT sessions and per-user data scoping; automatic Google Drive import.
-                    \item \textbf{Technologies:}  TypeScript \textbar\ Next.js (App Router) \textbar\ React \textbar\ PostgreSQL \textbar\ Tailwind CSS \textbar\ Anthropic SDK \textbar\ Recharts \textbar\ Garmin FIT SDK \textbar\ Google Drive API
-                \end{highlights}
-            \end{onecolentry}
+        \end{twocolentry}
+
+        \vspace{0.10 cm}
+
+        \begin{onecolentry}
+            {A training log that ingests Apple Watch and Garmin workouts and pairs them with an AI coach that sees your goal and full run history}
+            \begin{highlights}
+                \item \textbf{Features:} \texttt{.fit} and CSV parsing into per-km splits, heart-rate zones and running-form metrics; Riegel-projected race times; streaming AI chat with summarized run context; scrypt password hashing with JWT sessions and per-user data scoping; automatic Google Drive import.
+                \item \textbf{Technologies:} TypeScript \textbar\ Next.js (App Router) \textbar\ React \textbar\ PostgreSQL \textbar\ Tailwind CSS \textbar\ Anthropic SDK \textbar\ Recharts \textbar\ Garmin FIT SDK \textbar\ Google Drive API
+            \end{highlights}
+        \end{onecolentry}
 
         \vspace{0.30 cm}
 
@@ -334,14 +334,14 @@
                 \textbar\
                 \mbox{\hrefWithoutArrow{https://product-manager-ebon.vercel.app/}{\color{black}Live Website}}%
             }
-            
+
         }
             \textbf{Products Manager Software}
 
             \vspace{0.10 cm}
 
         \end{twocolentry}
-            
+
         \vspace{0.10 cm}
 
         \begin{onecolentry}
@@ -351,7 +351,7 @@
                 \item \textbf{Technologies:}  TypeScript \textbar\ React \textbar\ Node.js \textbar\ Express \textbar\ PostgreSQL \textbar\ Tailwind CSS \textbar\ Sequelize \textbar\ \mbox{Swagger \textbar\ } Jest \textbar\ Supertest
             \end{highlights}
         \end{onecolentry}
-        
+
         \vspace{0.30 cm}
 
         \begin{twocolentry}{
@@ -364,26 +364,25 @@
 
             \vspace{0.10 cm}
 
-            \end{twocolentry}
-                
-            \vspace{0.10 cm}
+        \end{twocolentry}
 
-            \begin{onecolentry}
-                {A statically generated portfolio and blog showcasing projects, with a focus on performance and modern animation}
-                \begin{highlights}
-                    \item \textbf{Features:} Bento-box one-page design, fully responsive. Multi-framework component islands, MDX blog with RSS and sitemap, scroll-driven and data-driven animations.
-                    \item \textbf{Technologies:}  TypeScript \textbar\ Astro 5 \textbar\ Solid.js \textbar\ Svelte 5 \textbar\ UnoCSS \textbar\ GSAP \textbar\ Motion \textbar\ D3.js \textbar\ Lenis
-                \end{highlights}
-            \end{onecolentry}
+        \vspace{0.10 cm}
 
+        \begin{onecolentry}
+            {A statically generated portfolio and blog showcasing projects, with a focus on performance and modern animation}
+            \begin{highlights}
+                \item \textbf{Features:} Bento-box one-page design, fully responsive. Multi-framework component islands, MDX blog with RSS and sitemap, scroll-driven and data-driven animations.
+                \item \textbf{Technologies:}  TypeScript \textbar\ Astro 5 \textbar\ Solid.js \textbar\ Svelte 5 \textbar\ UnoCSS \textbar\ GSAP \textbar\ Motion \textbar\ D3.js \textbar\ Lenis
+            \end{highlights}
+        \end{onecolentry}
 
 
     \section{Education}
 
         \begin{twocolentry}{
-        \textit{Buenos Aires, AR}
+            \textit{Buenos Aires, AR}
 
-        \textit{2021}}
+            \textit{2021}}
             \mbox{\hrefWithoutArrow{https://www.digitalhouse.com/} {\color{black} \hspace*{0.13cm}\textbf{Digital House}}}
 
             \textit{Full-Stack Web Development}
@@ -396,12 +395,12 @@
             \end{highlights}
         \end{onecolentry}
 
-
         \vspace{0.30 cm}
-        \begin{twocolentry}{
-        \textit{Buenos Aires, AR}
 
-        \textit{2017 – 2020}}
+        \begin{twocolentry}{
+            \textit{Buenos Aires, AR}
+
+            \textit{2017 – 2020}}
             \mbox{\hrefWithoutArrow{https://utn.edu.ar/en} {\color{black} \hspace*{0.13cm}\textbf{U.T.N}}}
 
             \textit{Electronic Engineering}
@@ -417,13 +416,13 @@
 
     \section{Hobbies \& Interests}
         \begin{onecolentry}
-            \textbf{Private Pilot:} Licensed private pilot, drawn to aviation for the combination of technical systems, procedures and decision-making under pressure.
+            \textbf{Private Pilot:} Trained to manage complex systems, requiring high attention to detail and adherence toprotocols. Demonstrated quick decision making and adaptability under pressure, valuable in software development environments.
         \end{onecolentry}
 
         \vspace{0.20 cm}
 
         \begin{onecolentry}
-            \textbf{Marathon Runner:} Finished the 2026 Copenhagen Marathon in 3:55, a goal set months out and trained for through bad weather and slow progress.
+            \textbf{Marathon Runner:} Finished the 2026 Copenhagen Marathon in 3:55, a goal set months out and trained for through bad weather, setbacks and slow progress. The same long-horizon discipline I bring to shipping software: commit to the target, do the unglamorous work every day, and finish what I start.
         \end{onecolentry}
 
 \end{document}

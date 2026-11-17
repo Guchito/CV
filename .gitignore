@@ -1,12 +1,6 @@
-# latexmk build artifacts
 *.aux
-*.fdb_latexmk
-*.fls
 *.log
-*.out
-*.synctex.gz
-*.toc
-
-# editor / tooling
+*.fls
+*.fdb_latexmk
+*.bak
 .qodo/
-.DS_Store
